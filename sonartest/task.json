@@ -1,0 +1,30 @@
+{
+ "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+ "id": "eb904ea1-40a0-4b78-84cf-df8e2a310f41",
+ "name": "sonartest",
+ "friendlyName": "Ram",
+ "description": "Ram",
+  "version": {
+    "Major": 5,
+    "Minor": 24,
+    "Patch": 2
+  },
+  "category": "Utility",
+ "instanceNameFormat": "Echo $(samplestring)",
+ "inputs": [
+ 
+    {
+      "name": "ADOConnection",
+      "type": "connectedService:externaltfs",
+      "label": "ADOConnection Server Endpoint",
+      "required": true,
+      "helpMarkDown": "Select the ADOConnection server endpoint for your project. To create one, click the Manage link and create a new ADOConnection Server Endpoint, enter your server url and token."
+    }
+	 
+ ],
+ "execution": {
+     "Node": {
+         "target": "index.js"
+     }
+ }
+ }
